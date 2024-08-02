@@ -1,0 +1,21 @@
+{
+    "name": "leandro-rosa/module-core",
+    "version": "1.0.0",
+    "description": "Leandro Rosa Core Module",
+    "type": "magento2-module",
+    "minimum-stability": "stable",
+    "require": {
+        "magento/framework": "*"
+    },
+    "license": [
+        "Proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "LeandroRosa\\Core\\": ""
+        }
+    }
+}

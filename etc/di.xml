@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Leandro Rosa
+ *
+ * NOTICE OF LICENSE
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Doris Module to newer
+ * versions in the future. If you wish to customize it for your
+ * needs please refer to https://developer.adobe.com/commerce/docs/ for more information.
+ *
+ * @category LeandroRosa
+ *
+ * @copyright Copyright (c) 2024 Leandro Rosa (https:www.rosa-planet.com.br)
+ *
+ * @author Leandro Rosa <dev.leandrorosa@gmail.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="LeandroRosa\Core\Api\ClientInterface" type="LeandroRosa\Core\Http\Client\Rest"/>
+    <preference for="LeandroRosa\Core\Api\CommandPoolInterface" type="LeandroRosa\Core\Model\Command\CommandPool"/>
+    <preference for="LeandroRosa\Core\Api\GenericCommandInterface" type="LeandroRosa\Core\Model\Command\CommandFallBack"/>
+    <preference for="LeandroRosa\Core\Api\LoggerInterface" type="LeandroRosa\Core\DorisLogger" />
+
+    <type name="LeandroRosa\Core\DorisLogger">
+        <arguments>
+            <argument name="name" xsi:type="string">main</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Magento\Framework\Logger\Handler\System</item>
+                <item name="debug" xsi:type="object">Magento\Framework\Logger\Handler\Debug</item>
+                <item name="syslog" xsi:type="object">Magento\Framework\Logger\Handler\Syslog</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="LeandroRosa\Core\DorisLogger">
+        <arguments>
+            <argument name="debugFile" xsi:type="string">%path%/seu-debug.log</argument>
+            <argument name="errorFile" xsi:type="string">%path%/seu-error.log</argument>
+            <argument name="warningFile" xsi:type="string">%path%/seu-warning.log</argument>
+        </arguments>
+    </type>
+
+    <type name="LeandroRosa\Core\DorisLogger">
+        <arguments>
+            <argument name="name" xsi:type="string">doris</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">YourNamespace\YourModule\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
