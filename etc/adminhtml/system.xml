@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Leandro Rosa
+ *
+ * NOTICE OF LICENSE
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Doris Module to newer
+ * versions in the future. If you wish to customize it for your
+ * needs please refer to https://developer.adobe.com/commerce/docs/ for more information.
+ *
+ * @category LeandroRosa
+ *
+ * @copyright Copyright (c) 2024 Leandro Rosa (https:www.rosa-planet.com.br)
+ *
+ * @author Leandro Rosa <dev.leandrorosa@gmail.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="doris" translate="label" sortOrder="80">
+            <label>Doris</label>
+        </tab>
+
+        <section id="doris_setup" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+            <label>Setup</label>
+            <tab>doris</tab>
+            <resource>LeandroRosa_Core::setup</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Setup Configuration</label>
+                <field id="doris_api_key" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="0">
+                    <label>Doris Api Key</label>
+                </field>
+                <field id="doris_secret_key" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="0">
+                    <label>Doris Secret Key</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

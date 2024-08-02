@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Leandro Rosa
+ *
+ * NOTICE OF LICENSE
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Doris Module to newer
+ * versions in the future. If you wish to customize it for your
+ * needs please refer to https://developer.adobe.com/commerce/docs/ for more information.
+ *
+ * @category LeandroRosa
+ *
+ * @copyright Copyright (c) 2024 Leandro Rosa (https:www.rosa-planet.com.br)
+ *
+ * @author Leandro Rosa <dev.leandrorosa@gmail.com>
+ */
+-->
+<csp_whitelist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Csp:etc/csp_whitelist.xsd">
+    <policies>
+        <policy id="img-src">
+            <values>
+                <value id="doris_media_test" type="host">doris.media-test.s3.sa-east-1.amazonaws.com</value>
+                <value id="doris_media_production" type="host">doris-media-production.s3.sa-east-1.amazonaws.com</value>
+                <value id="doris_avatar_test" type="host">doris-avatar-test.njix.net</value>
+                <value id="doris_avatar_test_imgix" type="host">doris-avatar-test.imgix.net</value>
+                <value id="doris_media_test_imgix" type="host">doris-media-test.imgix.net</value>
+                <value id="baidu" type="host">pos.baidu.com</value>
+                <value id="doris_storage_imgix" type="host">doris-storage.imgix.net</value>
+                <value id="eris_storage" type="host">eris-storage.s3.us-east-2.amazonaws.com</value>
+            </values>
+        </policy>
+        <policy id="script-src">
+            <values>
+                <value id="doris_mobi" type="host">mix.doris.mobi</value>
+                <value id="widget_staging_doris" type="host">widget-staging.doris.services</value>
+                <value id="doris_mobi_staging" type="host">mix.stg.doris.services</value>
+            </values>
+        </policy>
+        <policy id="connect-src">
+            <values>
+                <value id="amplitude" type="host">api.amplitude.com</value>
+                <value id="posthog" type="host">app.posthog.com</value>
+                <value id="widget_staging_doris" type="host">widget-staging.doris.services</value>
+                <value id="doris_gateway" type="host">gateway.doris.mobi</value>
+                <value id="doris_mobi_staging" type="host">mix.stg.doris.services</value>
+                <value id="sandbox_gateway_doris" type="host">gateway.doris.services</value>
+                <value id="hasura_staging_ws" type="host">wss://gateway.doris.mobi</value>
+                <value id="hasura_prod_ws" type="host">wss://sandbox-gateway.doris.services</value>
+            </values>
+        </policy>
+        <policy id="frame-src">
+            <values>
+                <value id="doris" type="host">mix.doris.mobi</value>
+                <value id="widget_staging_doris" type="host">widget-staging.doris.services</value>
+            </values>
+        </policy>
+        <policy id="style-src">
+            <values>
+                <value id="doris_static" type="host">static.doris.services</value>
+                <value id="google_fonts" type="host">fonts.googleapis.com</value>
+            </values>
+        </policy>
+        <policy id="font-src">
+            <values>
+                <value id="doris_static" type="host">static.doris.services</value>
+                <value id="google_fonts" type="host">fonts.gstatic.com</value>
+            </values>
+        </policy>
+        <policy id="media-src">
+            <values>
+                <value id="doris_media_production" type="host">doris-media-production.s3.sa-east-1.amazonaws.com</value>
+            </values>
+        </policy>
+    </policies>
+</csp_whitelist>
